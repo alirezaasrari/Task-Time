@@ -1,0 +1,22 @@
+.container{
+    width: 450px;
+    height: 380px;
+    margin: 20px;
+}
+.welcome{
+    color: #a4a4a4;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+.ask-mode{
+    color: #666666;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+.modes{
+    border: 1px solid grey;
+    /* width: 250px !important; */
+}
+.pro{
+    font-family: "Font Awesome 5 Pro"
+}

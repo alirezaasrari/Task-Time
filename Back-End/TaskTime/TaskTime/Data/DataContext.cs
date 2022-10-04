@@ -9,5 +9,6 @@ namespace TaskTime.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<SecondPage> SecondPages { get; set; }
     }
 }
