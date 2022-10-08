@@ -14,7 +14,7 @@ namespace TaskTime.Data.Services
         {
             LastPage _lastpagedata = new LastPage()
             {
-                UserId = lastpagedata.UserId,
+                EmployeeId = lastpagedata.EmployeeId,
                 Description = lastpagedata.Description,
                 Stars = lastpagedata.Stars,
             };

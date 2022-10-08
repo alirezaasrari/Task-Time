@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TaskTime.Data.Services;
+using TaskTime.Models.ViewModels;
 
 namespace TaskTime.Controllers
 {
@@ -18,6 +19,20 @@ namespace TaskTime.Controllers
         {
             var allstates = _stateservice.GetAllStates();
             return Ok(allstates);
+        }
+
+        [HttpGet("get-employee-state-by-id/{id}")]
+        public IActionResult GetEmployeeStateById(int id)
+        {
+            var employeestate = _stateservice.GetEmployeeStateById(id);
+            return Ok(employeestate);
+        }
+
+        [HttpPost("add-employee-state")]
+        public IActionResult PostEmployeeState([FromBody] StateVM state)
+        {
+            _stateservice.AddState(state);
+            return Ok();
         }
     }
 }

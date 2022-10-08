@@ -1,8 +1,13 @@
-﻿namespace TaskTime.ViewModels
+﻿using TaskTime.Models;
+
+namespace TaskTime.ViewModels
 {
     public class PersonWorkAndRestVM
     {
         public int State { get; set; }
-        public int UserId { get; set; }
+
+        //navigation properties
+        public int EmployeeId { get; set; }
+        public Employee Employee { get; set; }
     }
 }

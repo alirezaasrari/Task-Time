@@ -2,7 +2,10 @@
 {
     public class StateVM
     {
-        public int EmployeeId { get; set; }
         public string EmployeeState { get; set; }
+
+        //navigation properties
+        public int EmployeeId { get; set; }
+        public Employee Employee { get; set; }
     }
 }
