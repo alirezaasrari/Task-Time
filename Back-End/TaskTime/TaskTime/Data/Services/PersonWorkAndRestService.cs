@@ -1,5 +1,6 @@
 ﻿using TaskTime.Data;
 using TaskTime.Models;
+using TaskTime.ViewModels;
 
 namespace TaskTime.services
 {
@@ -10,17 +11,21 @@ namespace TaskTime.services
         {
             _context = context;
         }
-
-        public void AddRest(PersonWorkAndRest personWorkAndRest)
+        public void Start(PersonWorkAndRestVM personWorkAndRest) 
         {
-            int _workTime = 0;
-            DateTime _workDay = DateTime.Now;
+           _context.SaveChanges();
+        }
+        public void AddWork(PersonWorkAndRestVM personWorkAndRest)
+        {
 
-            if (personWorkAndRest.State == 0)
-            {
-              // _workTime = personWorkAndRest;
-              // _workDay = personWorkAndRest;
-            }
+        }
+        public void AddRest(PersonWorkAndRestVM personWorkAndRest)
+        {
+
+        }
+        public void End(PersonWorkAndRestVM personWorkAndRest)
+        {
+
         }
     }
 }

@@ -26,7 +26,6 @@ namespace TaskTime.Data.Services
             var _secondpage = new SecondPage()
             {
                 EmployeeId = secondPage.EmployeeId,
-                Stars = secondPage.Stars,
                 Emotion = secondPage.Emotion,
                 Description = secondPage.Description,
             };
@@ -40,7 +39,6 @@ namespace TaskTime.Data.Services
             if(employeesecondpagedata != null)
             {
                 employeesecondpagedata.EmployeeId = secondPage.EmployeeId;
-                employeesecondpagedata.Stars = secondPage.Stars;
                 employeesecondpagedata.Emotion = secondPage.Emotion;
                 employeesecondpagedata.Description = secondPage.Description;
 
