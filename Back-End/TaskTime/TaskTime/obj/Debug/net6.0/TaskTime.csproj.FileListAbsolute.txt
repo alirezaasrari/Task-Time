@@ -266,3 +266,5 @@ E:\Task-Time\Task-Time-Codes\Back-End\TaskTime\TaskTime\obj\Debug\net6.0\refint\
 E:\Task-Time\Task-Time-Codes\Back-End\TaskTime\TaskTime\obj\Debug\net6.0\TaskTime.pdb
 E:\Task-Time\Task-Time-Codes\Back-End\TaskTime\TaskTime\obj\Debug\net6.0\TaskTime.genruntimeconfig.cache
 E:\Task-Time\Task-Time-Codes\Back-End\TaskTime\TaskTime\obj\Debug\net6.0\ref\TaskTime.dll
+E:\Task-Time\Task-Time-Codes\Back-End\TaskTime\TaskTime\bin\Debug\net6.0\NodaTime.dll
+E:\Task-Time\Task-Time-Codes\Back-End\TaskTime\TaskTime\bin\Debug\net6.0\ExpressTimezone.dll

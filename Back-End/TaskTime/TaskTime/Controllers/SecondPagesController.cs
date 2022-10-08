@@ -22,14 +22,14 @@ namespace TaskTime.Controllers
         }
 
         // GET: api/SecondPages
-        [HttpGet("get-second-page-data")]
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<SecondPage>>> GetSecondPages()
         {
             return await _context.SecondPages.ToListAsync();
         }
 
         // GET: api/SecondPages/5
-        [HttpGet("get-second-page-data/{id}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult<SecondPage>> GetSecondPage(int id)
         {
             var secondPage = await _context.SecondPages.FindAsync(id);
@@ -44,7 +44,7 @@ namespace TaskTime.Controllers
 
         // PUT: api/SecondPages/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("update-second-page-data/{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> PutSecondPage(int id, SecondPage secondPage)
         {
             if (id != secondPage.Id)
@@ -75,7 +75,7 @@ namespace TaskTime.Controllers
 
         // POST: api/SecondPages
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost("post-second-page-data")]
+        [HttpPost]
         public async Task<ActionResult<SecondPage>> PostSecondPage(SecondPage secondPage)
         {
             _context.SecondPages.Add(secondPage);
@@ -85,7 +85,7 @@ namespace TaskTime.Controllers
         }
 
         // DELETE: api/SecondPages/5
-        [HttpDelete("delete-second-page-data/{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSecondPage(int id)
         {
             var secondPage = await _context.SecondPages.FindAsync(id);

@@ -1777,6 +1777,22 @@
           }
         }
       },
+      "NodaTime/3.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.7.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NodaTime.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NodaTime.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "NuGet.Common/6.2.1": {
         "type": "package",
         "dependencies": {
@@ -3626,6 +3642,18 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "Twileloop.ExpressTimezone/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NodaTime": "3.0.1"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/ExpressTimezone.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/ExpressTimezone.dll": {}
         }
       }
     }
@@ -6006,6 +6034,20 @@
         "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
         "newtonsoft.json.bson.1.0.1.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
+      ]
+    },
+    "NodaTime/3.0.1": {
+      "sha512": "55MpK0gu2hafzsS2pwYtdE8deuqoAMYolCl3X0JMYC/e4+hcT335v36ZOxeRghED6GzfwvOBqY5cOZoqjAdInw==",
+      "type": "package",
+      "path": "nodatime/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/NodaTime.dll",
+        "lib/netstandard2.0/NodaTime.pdb",
+        "lib/netstandard2.0/NodaTime.xml",
+        "nodatime.3.0.1.nupkg.sha512",
+        "nodatime.nuspec"
       ]
     },
     "NuGet.Common/6.2.1": {
@@ -10206,6 +10248,18 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Twileloop.ExpressTimezone/1.0.0": {
+      "sha512": "Lyj3pBWygYvbY5r9EWFovgPlKRP4Qg+rt0XISJ8acEOGhB8O+PrwDMtOupSG1XiJPYaum0z/2PvvDWn/R4BQow==",
+      "type": "package",
+      "path": "twileloop.expresstimezone/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.1/ExpressTimezone.dll",
+        "twileloop.expresstimezone.1.0.0.nupkg.sha512",
+        "twileloop.expresstimezone.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -10216,7 +10270,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.9",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.10",
-      "Swashbuckle.AspNetCore >= 6.2.3"
+      "Swashbuckle.AspNetCore >= 6.2.3",
+      "Twileloop.ExpressTimezone >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -10289,6 +10344,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.2.3, )"
+          },
+          "Twileloop.ExpressTimezone": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [

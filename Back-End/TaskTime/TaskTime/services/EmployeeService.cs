@@ -16,7 +16,6 @@ namespace TaskTime.services
             var _employee = _context.Employees.FirstOrDefault(n => n.Id == employeeId);
             if(_employee != null)
             {
-                _employee.DateTime = DateTime.Now;
                 _employee.Name = employee.Name;
 
                 _context.SaveChanges();

@@ -10,5 +10,6 @@ namespace TaskTime.Data
 
         public DbSet<Employee> Employees { get; set; }
         public DbSet<SecondPage> SecondPages { get; set; }
+        public DbSet<PersonWorkAndRest> PersonWorkAndRests { get; set; }
     }
 }

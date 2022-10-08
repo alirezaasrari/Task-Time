@@ -16,3 +16,10 @@ namespace TaskTime.Data
         }
     }
 }
+
+
+// DateOnly dateOnly = DateOnly.FromDateTime(DateTime.Now);
+// TimeOnly timeOnly = TimeOnly.FromDateTime(DateTime.Now);
+
+// Console.WriteLine(dateOnly.DayOfWeek);
+// Console.WriteLine(timeOnly);

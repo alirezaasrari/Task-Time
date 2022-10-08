@@ -71,6 +71,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "Twileloop.ExpressTimezone": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [

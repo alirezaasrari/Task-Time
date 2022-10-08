@@ -22,14 +22,14 @@ namespace TaskTime.Controllers
         }
 
         // GET: api/Employees
-        [HttpGet("get-employee")]
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<Employee>>> GetEmployees()
         {
             return await _context.Employees.ToListAsync();
         }
 
         // GET: api/Employees/5
-        [HttpGet("get-employee-by/{id}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult<Employee>> GetEmployee(int id)
         {
             var employee = await _context.Employees.FindAsync(id);
@@ -44,7 +44,7 @@ namespace TaskTime.Controllers
 
         // PUT: api/Employees/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("update-employee-by/{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> PutEmployee(int id, Employee employee)
         {
             if (id != employee.Id)
@@ -75,7 +75,7 @@ namespace TaskTime.Controllers
 
         // POST: api/Employees
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost("create-employee")]
+        [HttpPost]
         public async Task<ActionResult<Employee>> PostEmployee(Employee employee)
         {
             _context.Employees.Add(employee);
@@ -85,7 +85,7 @@ namespace TaskTime.Controllers
         }
 
         // DELETE: api/Employees/5
-        [HttpDelete("delete-employee-by/{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEmployee(int id)
         {
             var employee = await _context.Employees.FindAsync(id);
