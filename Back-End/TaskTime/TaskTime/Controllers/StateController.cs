@@ -34,5 +34,12 @@ namespace TaskTime.Controllers
             _stateservice.AddState(state);
             return Ok();
         }
+
+        [HttpPut("update-employee-state/{id}")]
+        public IActionResult UpdateEmployeeState(int id, [FromBody]StateVM state)
+        {
+            var updatedstate = _stateservice.UpdateState(id,state);
+            return Ok(updatedstate);
+        }
     }
 }

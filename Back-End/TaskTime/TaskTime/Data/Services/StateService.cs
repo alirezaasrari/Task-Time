@@ -28,5 +28,17 @@ namespace TaskTime.Data.Services
             return employeestate;
         }
 
+        public State UpdateState(int EmployeeId, StateVM state)
+        {
+            var _statetobeupdate = _context.States.FirstOrDefault(n => n.Id == EmployeeId);
+            if(_statetobeupdate != null)
+            {
+                _statetobeupdate.EmployeeState = state.EmployeeState;
+                _statetobeupdate.EmployeeId = state.EmployeeId;
+                _context.SaveChanges();
+            };
+            return _statetobeupdate;
+        }
+
     }
 }
