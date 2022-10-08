@@ -17,6 +17,7 @@ builder.Services.AddControllers();
 builder.Services.AddTransient<EmployeeService>();
 builder.Services.AddTransient<SecondPageService>();
 builder.Services.AddTransient<PersonWorkAndRestService>();
+builder.Services.AddTransient<LastPageService>();
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

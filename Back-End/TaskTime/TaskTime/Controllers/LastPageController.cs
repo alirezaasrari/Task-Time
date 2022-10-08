@@ -23,8 +23,8 @@ namespace TaskTime.Controllers
         [HttpGet("get-all-lastpages")]
         public IActionResult GetAllLastPages()
         {
-            _lastpageservice.GetAllLastPages();
-            return Ok();
+            var alllastpages = _lastpageservice.GetAllLastPages();
+            return Ok(alllastpages);
         }
         [HttpGet("get-last-page-by-id/{id}")]
         public IActionResult GetLastPageById(int id)
