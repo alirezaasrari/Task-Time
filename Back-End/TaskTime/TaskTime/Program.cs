@@ -1,13 +1,24 @@
 using TaskTime.Data;
 using Microsoft.EntityFrameworkCore;
+using TaskTime.services;
+using TaskTime.Data.Services;
 
 var myAllowSpecificOrigins = "_mySpecificOrigins";
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+// configure services
+
+builder.Services.AddTransient<EmployeeService>();
+builder.Services.AddTransient<SecondPageService>();
+builder.Services.AddTransient<PersonWorkAndRestService>();
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
