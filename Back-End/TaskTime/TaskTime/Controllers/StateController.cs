@@ -17,7 +17,7 @@ namespace TaskTime.Controllers
         [HttpGet("get-all-states")]
         public IActionResult GetAllStates()
         {
-            var allstates = _stateservice.GetAllStates();
+            var allstates = _stateservice.GetAllStates(); 
             return Ok(allstates);
         }
 
